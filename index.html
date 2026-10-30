@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+    <div class="hud" id="hud">
+        <span class="bracket tl"></span>
+        <span class="bracket tr"></span>
+        <span class="bracket bl"></span>
+        <span class="bracket br"></span>
+        <div class="progress">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="scanline"></div>
+    </div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <p class="loader-line"><span id="loaderText">INITIALIZING SOLAR TELEMETRY</span><span class="caret">_</span>
+            </p>
+            <div class="loader-bar">
+                <div class="loader-fill" id="loaderFill"></div>
+            </div>
+            <p class="loader-percent" id="loaderPercent">0%</p>
+        </div>
+    </div>
+    <div class="cursor">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2 L21 22 L12 17 L3 22 Z" />
+        </svg>
+    </div>
+    <section class="hero">
+        <div class="orb"></div>
+        <div class="content">
+            <p class="label">// Solar Cycle 25 · live simulation</p>
+            <h1 class="split" data-hero>The storm that knocks <span class="accent">satellites</span> out of the sky.
+            </h1>
+            <p class="sub">Light from a solar flare reaches us in 8 minutes. The plasma behind it takes a day or more.
+                What
+                it does to our technology can take years to repair.</p>
+            <div class="buttons">
+                <a href="#" class="btn btn-orange">Simulate a storm</a>
+                <a href="#" class="btn btn-cyan">How satellites die</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="distance">
+        <span class="giant-num" aria-hidden="true">150M</span>
+        <h2 class="reveal">150 million km. Eight minutes for the light, one day for the damage.</h2>
+    </section>
+
+    <section class="timeline-section">
+        <p class="label">// Case files</p>
+        <h2 class="split">It has happened before.</h2>
+
+        <div class="timeline">
+            <div class="line">
+                <div class="line-fill"></div>
+            </div>
+
+            <div class="step">
+                <span class="dot"></span>
+                <p class="time">SEP 1859 · THE CARRINGTON EVENT</p>
+                <h3>The telegraph catches fire</h3>
+                <p>Richard Carrington watched a flare burn across the Sun. Roughly 17 hours later, telegraph lines
+                    sparked,
+                    operators were shocked, and auroras glowed as far south as the Caribbean.</p>
+            </div>
+
+            <div class="step">
+                <span class="dot"></span>
+                <p class="time">MAR 1989 · QUEBEC</p>
+                <h3>A province goes dark in 90 seconds</h3>
+                <p>A geomagnetic storm collapsed Hydro-Québec's grid. About six million people lost power for roughly
+                    nine
+                    hours.</p>
+            </div>
+
+            <div class="step">
+                <span class="dot"></span>
+                <p class="time">FEB 2022 · STARLINK</p>
+                <h3>Forty satellites never leave</h3>
+                <p>SpaceX launched 49 Starlink satellites into a low parking orbit. A storm the next day swelled the
+                    upper
+                    atmosphere, the extra drag pulled them down, and up to 40 were lost.</p>
+            </div>
+
+            <div class="step">
+                <span class="dot"></span>
+                <p class="time">MAY 2024 · THE GANNON STORM</p>
+                <h3>Auroras at the equator's doorstep</h3>
+                <p>The strongest geomagnetic storm in over two decades. Auroras appeared far south of their usual range,
+                    and
+                    farmers reported GPS guidance trouble on tractors in the middle of planting season.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="earth-section">
+        <p class="label">// Orbital view</p>
+        <h2 class="reveal">Low orbit sits at the edge of the atmosphere. Make that edge swell, and everything up there
+            drags.</h2>
+        <div id="earth"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
